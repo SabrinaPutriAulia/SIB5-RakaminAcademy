@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div
+          class="d-flex flex-column col-md-2 p-3 bg-dark position-relative"
+          style="height: 100vh"
+        >
+          <div class="position-fixed" style="width: 13.5rem">
+            <a
+              href=""
+              class="d-flex align-items-center text-decoration-none text-white"
+            >
+              <span class="fs-4">DVD RENTAL</span>
+            </a>
+            <div class="text-white">
+              <hr />
+            </div>
+            <ul class="nav nav-pills flex-column mb-auto">
+              <li>
+                <a
+                  href="/dvdrental/home"
+                  class="nav-link link-light list-group-item-action list-group-item-primary"
+                >
+                  Dashboard
+                </a>
+              </li>
+              <li class="dropdown">
+                <a
+                  href="#"
+                  class="nav-link link-light list-group-item-action list-group-item-primary dropdown-toggle"
+                  role="button"
+                  id="dropdownMenuLink"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Data
+                </a>
+                <ul class="dropdown-menu w-100">
+                  <li>
+                    <a class="dropdown-item" href="/dvdrental/films"
+                      >List Film</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/dvdrental/categories"
+                      >List Kategori</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

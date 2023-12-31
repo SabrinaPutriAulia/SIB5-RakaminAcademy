@@ -1,0 +1,101 @@
+<!-- views/categories.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar Kategori</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div
+          class="d-flex flex-column col-md-2 p-3 bg-dark position-relative"
+          style="height: 100vh"
+        >
+          <div class="position-fixed" style="width: 13.5rem">
+            <a
+              href=""
+              class="d-flex align-items-center text-decoration-none text-white"
+            >
+              <span class="fs-4">DVD RENTAL</span>
+            </a>
+            <div class="text-white">
+              <hr />
+            </div>
+            <ul class="nav nav-pills flex-column mb-auto">
+              <li>
+                <a
+                  href="/dvdrental/home"
+                  class="nav-link link-light list-group-item-action list-group-item-primary"
+                >
+                  Dashboard
+                </a>
+              </li>
+              <li class="dropdown">
+                <a
+                  href="#"
+                  class="nav-link link-light list-group-item-action list-group-item-primary dropdown-toggle"
+                  role="button"
+                  id="dropdownMenuLink"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Data
+                </a>
+                <ul class="dropdown-menu w-100">
+                  <li>
+                    <a class="dropdown-item" href="/dvdrental/films"
+                      >List Film</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/dvdrental/categories"
+                      >List Kategori</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-10 p-4">
+          <h1>Daftar Kategori</h1>
+          <table class="table table-striped table-sm table-hover">
+            <thead>
+              <tr class="text-center text-capitalize">
+                <th>category ID</th>
+                <th>title</th>
+                <th>description</th>
+                <!-- Tambahkan kolom lain sesuai kebutuhan -->
+              </tr>
+            </thead>
+            <tbody>
+              <% categories.forEach((category) => { %>
+              <tr class="text-center">
+                <td><%= category.category_id %></td>
+                <td>
+                  <a
+                    href="/dvdrental/films/categories/<%= category.category_id %>"
+                    class="text-decoration-none"
+                    ><%= category.name %></a
+                  >
+                </td>
+                <td><%= category.last_update %></td>
+                <!-- Tambahkan kolom lain sesuai kebutuhan -->
+              </tr>
+              <% }); %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
