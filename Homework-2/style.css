@@ -1,0 +1,454 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: 0;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.break-line {
+  padding: 0 9rem;
+}
+
+.break-line hr {
+  margin: 0; /* Hapus margin default pada elemen <hr> */
+  border-top: 2px solid rgb(202, 202, 202); /* Contoh: garis solid hitam dengan lebar 2px */
+}
+
+/* Navbar Section */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(253, 253, 253, 0.6);
+  align-items: center;
+  padding: 1rem 7%;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  left: 0;
+  color: #00647b;
+}
+
+.navbar .navbar-logo,
+.contact .row .column .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #00647b;
+}
+
+.navbar .navbar-nav a {
+  display: inline-block;
+  font-size: 1.1rem;
+  margin: 0 1.2rem;
+  color: #00647b;
+  font-weight: bold;
+}
+
+.navbar .navbar-extra a {
+  color: #00647b;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Home Section */
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(https://images.unsplash.com/photo-1560103104-4623c14a473b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 0 7%;
+}
+
+.home .content {
+  padding: 1rem 7%;
+  max-width: 50rem;
+}
+
+.home .content h1 {
+  font-size: 5rem;
+  color: white;
+  line-height: 1.1;
+}
+
+.home .content p {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 100;
+  color: white;
+}
+
+.home .content .btn-home {
+  margin-top: 2rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  color: #00647b;
+  border-radius: 0.5rem;
+  background-color: white;
+}
+
+/* Destination Section */
+.destination,
+.event,
+.artikel {
+  padding: 7rem 7% 1rem;
+}
+
+.destination h2,
+.event h2,
+.artikel h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.destination .row,
+.event .row,
+.artikel .row,
+.contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  justify-content: center;
+}
+
+.destination .row .destination-card {
+  width: 13rem;
+  height: 19rem;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0.8rem;
+  margin: 1rem;
+}
+
+.destination .row .destination-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.destination .row .destination-card:hover img {
+  transform: scale(1.1);
+}
+
+.destination .row .destination-card .destination-content {
+  position: absolute;
+  bottom: 0;
+  padding: 1.2rem;
+  color: white;
+}
+
+.destination .row .destination-card .destination-content h2 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.destination .row .destination-card .destination-content p {
+  font-size: 0.8rem;
+}
+
+/* Event Section */
+.event .row .event-card {
+  width: 21rem;
+  height: 14rem;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0.8rem;
+  margin: 1.5rem 2rem;
+}
+
+.event .row .event-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.event .row .event-card:hover img {
+  transform: scale(1.1);
+}
+
+.event .row .event-card .event-content {
+  position: absolute;
+  bottom: 0;
+  padding: 0.8rem;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 100%;
+}
+
+.event .row .event-card .event-content h2 {
+  margin: 0;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.event .row .event-card .event-content p {
+  font-size: 0.8rem;
+}
+
+/* Artikel Section */
+.artikel .artikel-card {
+  display: flex;
+  width: 72rem;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0.8rem;
+  background-color: white;
+  flex-direction: row;
+  border: 3px solid white;
+  margin-bottom: 2rem;
+}
+
+.artikel .artikel-card:hover {
+  border: 3px solid rgba(0, 123, 255, 0.3);
+}
+
+.artikel .artikel-card .artikel-image {
+  display: flex;
+  width: 17rem;
+}
+
+.artikel .artikel-card .artikel-image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.artikel .artikel-card .artikel-content {
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem;
+  position: relative;
+  width: 40rem;
+}
+
+.artikel .artikel-card .artikel-content::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 2px; /* Lebar garis vertikal */
+  height: 75%;
+  background-color: rgb(227, 221, 221); /* Warna garis vertikal */
+  align-items: center;
+  justify-content: center;
+}
+
+.artikel .artikel-card .artikel-content h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  text-align: left;
+}
+
+.artikel .artikel-card .artikel-content p {
+  margin-top: 0.9rem;
+  font-size: 0.9rem;
+  font-weight: lighter;
+}
+
+.artikel .artikel-card .read-more-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+
+.artikel .artikel-card .read-more-content .read-more {
+  background-color: #00647b;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 0.5rem 1rem;
+  margin: 0 2rem;
+  border-radius: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+}
+
+/* Kontak Section */
+.contact {
+  background-color: #091426;
+  padding: 2rem 7% 1rem;
+}
+
+.contact .row .column .social-icons {
+  margin-top: 0.2rem;
+  display: flex;
+  justify-content: left;
+}
+
+.contact .row .column .social-icons a {
+  display: flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 1rem;
+  background-color: #00647b;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1rem;
+}
+
+.contact .row .column .social-icons i {
+  color: white;
+  font-size: 1.1rem;
+}
+
+.contact .row h2 {
+  font-size: 2rem;
+  width: 18rem;
+  color: white;
+}
+
+.contact .row .column {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15rem;
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 60%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: white;
+    width: 20rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: #00647b;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .destination,
+  .event,
+  .artikel,
+  .contact {
+    padding: 4rem 7% 1rem;
+  }
+
+  .destination .row,
+  .event .row,
+  .artikel .row,
+  .contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    justify-content: center;
+  }
+
+  .event .row .event-card {
+    width: 43%;
+    height: 20rem;
+    margin: 1rem 1rem;
+  }
+
+  .artikel .artikel-card {
+    margin: 0.5rem 0.8rem;
+    flex-direction: column;
+    width: 45%;
+  }
+
+  .artikel .artikel-card .artikel-image {
+    width: 100%;
+    height: 15rem;
+  }
+
+  .artikel .artikel-card .artikel-content {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .artikel .artikel-card .artikel-content h2 {
+    font-size: 1.1rem;
+  }
+
+  .artikel .artikel-card .artikel-content p {
+    display: none;
+  }
+
+  .artikel .artikel-card .read-more-content {
+    margin: 0.5rem 0;
+  }
+
+  .artikel .artikel-card .read-more-content .read-more {
+    padding: 0.5rem 0.8rem;
+  }
+
+  .artikel .artikel-card .artikel-content::after {
+    display: none;
+  }
+
+  .contact .row h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .contact .row .column {
+    margin-left: 0;
+    margin-top: 0rem;
+  }
+
+  .contact .row .column .navbar-logo {
+    text-align: center;
+  }
+
+  .contact .row .column .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.2rem;
+  }
+
+  .contact .row .column .social-icons a {
+    margin-right: 0.6rem;
+  }
+}
